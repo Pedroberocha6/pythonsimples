@@ -24,6 +24,8 @@ print (movieName.find("o"))
 
 # trocar posições
 print (movieName.replace("Top","Matrix"))
+print (movieName.replace(" "," ")) #remove os espacos
 
 # quebra a string
 print (movieDescription.split(','))
+
