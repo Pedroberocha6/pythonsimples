@@ -1,11 +1,2 @@
-alimentos = {
-    
-    "Arroz" : 15.5,
-    "Feijão" : 8.9,
-    "Macarrão" : 6.75
-    
-}
-
-media = (alimentos.get("Arroz") + alimentos.get("Feijão") + alimentos.get("Macarrão")) / 3
-
-print (media)
+for i in range(3):
+    print (i)
