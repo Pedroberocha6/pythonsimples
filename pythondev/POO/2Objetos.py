@@ -25,6 +25,13 @@ game3.yearLaucher = 2018
 game3.multplayer = False
 game3.note = 9
 
+# Quarto Game
+game4 = Game ()
+game4.name = "Super Mario"
+game4.yearLaucher = 1998
+game4.multplayer = False
+game4.note = 9.8
+
 print ("--- Dados do Jogo ---")
 print (f"Nome do jogo: {game1.name} \nAno de lacamento: {game1.yearLaucher}\n ")
 print (f"Nome do jogo: {game2.name} \nAno de lacamento: {game2.yearLaucher}\n ")
