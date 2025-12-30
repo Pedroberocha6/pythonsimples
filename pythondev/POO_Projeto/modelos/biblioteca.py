@@ -11,9 +11,11 @@ class biblioteca:
     def __str__(self):
         return self.nome #retorna o nome quando usa o print direto
     
-    def lista ():
+    @classmethod
+    def listar (cls):
+        print(f"{ 'Nome da biblioteca:'.ljust(25)}| Status:  ")
         for biblio in biblioteca.bibliotecas :
-            print(f"{biblio.nome} | {biblio.ativo}")
+            print(f"{biblio.nome.ljust(25)}| {biblio.ativo}")
             
     def alterar_estado(self):
         self._ativo = not self._ativo
@@ -25,5 +27,4 @@ class biblioteca:
 bibliotecaCidade = biblioteca("Biblioteca da Cidade") # Instancia o objeto. O nome agora e obrigatorio
 bibliotecaCidade.alterar_estado()
 bibliotecaCidade = biblioteca("Biblioteca do Shopping")
-
-biblioteca.lista()
+biblioteca.listar()
