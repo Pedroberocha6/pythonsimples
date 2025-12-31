@@ -1,4 +1,4 @@
-class biblioteca:
+class Biblioteca:
     
     bibliotecas = []
     
@@ -6,7 +6,7 @@ class biblioteca:
         self.nome = nome
         self._ativo = False  #Privado. Ao adicionar o _ eu torno ele em atributo privado e assim apenas a classe tem acesso para alterar o atributo
         
-        biblioteca.bibliotecas.append(self) # Adiciona a lista usando o self como palavra reservada
+        Biblioteca.bibliotecas.append(self) # Adiciona a lista usando o self como palavra reservada
     
     def __str__(self):
         return self.nome #retorna o nome quando usa o print direto
@@ -14,7 +14,7 @@ class biblioteca:
     @classmethod
     def listar (cls):
         print(f"{ 'Nome da biblioteca:'.ljust(25)}| Status:  ")
-        for biblio in biblioteca.bibliotecas :
+        for biblio in Biblioteca.bibliotecas :
             print(f"{biblio.nome.ljust(25)}| {biblio.ativo}")
             
     def alterar_estado(self):
@@ -24,7 +24,4 @@ class biblioteca:
     def ativo(self):
         return "Ativada." if self._ativo else "Desativada." # Metodo set
     
-bibliotecaCidade = biblioteca("Biblioteca da Cidade") # Instancia o objeto. O nome agora e obrigatorio
-bibliotecaCidade.alterar_estado()
-bibliotecaCidade = biblioteca("Biblioteca do Shopping")
-biblioteca.listar()
+
