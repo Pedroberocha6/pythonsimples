@@ -1,3 +1,5 @@
+from modelos.avaliacoes import Avaliacao
+
 class Biblioteca:
     
     bibliotecas = []
@@ -5,7 +7,7 @@ class Biblioteca:
     def __init__(self, nome):
         self.nome = nome
         self._ativo = False  #Privado. Ao adicionar o _ eu torno ele em atributo privado e assim apenas a classe tem acesso para alterar o atributo
-        
+        self._avaliacoes = []
         Biblioteca.bibliotecas.append(self) # Adiciona a lista usando o self como palavra reservada
     
     def __str__(self):
@@ -23,5 +25,9 @@ class Biblioteca:
     @property
     def ativo(self):
         return "Ativada." if self._ativo else "Desativada." # Metodo set
+    
+    def receberAvaliocao(self, cliente, nota):
+        avaliacao = Avaliacao(cliente, nota)
+        self._avaliacoes.append(avaliacao)
     
 

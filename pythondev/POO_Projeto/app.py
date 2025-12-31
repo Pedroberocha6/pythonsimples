@@ -5,6 +5,9 @@ BibliotecaShopping = Biblioteca("Biblioteca do Shopping")
 
 BibliotecaCidade.alterar_estado()
 
+BibliotecaCidade.receberAvaliocao("Pedro", 9)
+BibliotecaCidade.receberAvaliocao("Kaic", 8)
+
 def main():
     Biblioteca.listar()
 
